@@ -1,5 +1,6 @@
 import smtplib, ssl, getpass
 
+
 class Email(object):
     def __init__(self):
         self.port = 465  # SSL port
@@ -9,7 +10,6 @@ class Email(object):
         self.password = creds["pass"]       # Senders password
         # Create a secure SSL context
         self.context = ssl.create_default_context()
-    
 
     def login_credentials(self):
         """ The senders login credentials - password is hidden. """
@@ -39,5 +39,3 @@ class Email(object):
 
 if __name__ == "__main__":
     Email().send_mail()
-
-    
