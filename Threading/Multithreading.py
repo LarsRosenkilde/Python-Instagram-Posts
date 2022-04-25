@@ -6,7 +6,6 @@ def function_0():
     time.sleep(.4)
     print("Thread 1: Is done!")
 
-
 def function_1(arg=5):
     print("Thread 2: Is starting...")
     time.sleep(.1)
@@ -15,13 +14,11 @@ def function_1(arg=5):
         time.sleep(.1)
     print("Thread 2: Is done!")
 
-
 def function_2():
     print("Thread 3: Is starting...")
     while True:
         print("Thread 3: Daemon process running...")
         time.sleep(.1)
-
 
 if __name__ == "__main__":
     # Normal thread without any arguments.
@@ -35,4 +32,3 @@ if __name__ == "__main__":
     thread_1.start()
     thread_2.start()
 
-    
