@@ -1,10 +1,12 @@
 import time
 import threading
 
+
 def function_0():
     print("Thread 1: Is starting...")
     time.sleep(.4)
     print("Thread 1: Is done!")
+
 
 def function_1(arg=5):
     print("Thread 2: Is starting...")
@@ -14,11 +16,13 @@ def function_1(arg=5):
         time.sleep(.1)
     print("Thread 2: Is done!")
 
+
 def function_2():
     print("Thread 3: Is starting...")
     while True:
         print("Thread 3: Daemon process running...")
         time.sleep(.1)
+
 
 if __name__ == "__main__":
     # Normal thread without any arguments.
