@@ -1,7 +1,6 @@
 import cv2
 
 camera = cv2.VideoCapture(0) # Selection of camera
-# video = cv2.VideoCapture("test_video.mp4") # Selection of video
 
 while True:
     # val: Validation of camera or video is available.
