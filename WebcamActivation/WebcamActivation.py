@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 camera = cv2.VideoCapture(0) # Selection of camera
 # video = cv2.VideoCapture("test_video.mp4") # Selection of video
@@ -13,7 +12,8 @@ while True:
     if cv2.waitKey(1) == ord("e"):
         break
 
-# Release the device from the program, making it available to the os again.
-camera.release()
-cv2.destroyAllWindows() # Terminates the video display
+if __name__ == "__main__":
+    # Release the device from the program, making it available to the os again.
+    camera.release()
+    cv2.destroyAllWindows() # Terminates the video display
 
