@@ -10,6 +10,9 @@ class NumberAnalyzer(object):
     def __init__(self, number):
         self.number = phonenumbers.parse(number)
         self.url = "https://ipinfo.io/"
+    
+    def __str__(self):
+        return str(f"\n{tabulate(self.parse_data)}")
 
     def analyze(self):
         description = geocoder.description_for_number(self.number, "en")
@@ -34,9 +37,6 @@ class NumberAnalyzer(object):
                 ["Location", location], ["Postal", postal], ["Timezone", timezone], 
                 ["Server", server], ["Hostname", hostname], ["Supplier", supplier], 
                 ["IP", ip]]
-    
-    def __str__(self):
-        return str(f"\n{tabulate(self.parse_data)}")
 
 
 if __name__ == "__main__":
