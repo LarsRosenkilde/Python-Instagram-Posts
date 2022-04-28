@@ -30,9 +30,10 @@ class NumberAnalyzer(object):
         server = device["org"]
         hostname = device["hostname"]
         ip = device["ip"]
-        return [["Country", country], ["Region", region], ["City", city], ["Location", location], 
-                ["Postal", postal], ["Timezone", timezone], ["Server", server], ["Hostname", hostname], 
-                ["Supplier", supplier], ["IP", ip]]
+        return [["Country", country], ["Region", region], ["City", city],
+                ["Location", location], ["Postal", postal], ["Timezone", timezone], 
+                ["Server", server], ["Hostname", hostname], ["Supplier", supplier], 
+                ["IP", ip]]
     
     def __str__(self):
         return str(f"\n{tabulate(self.parse_data)}")
