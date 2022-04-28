@@ -5,6 +5,7 @@ from phonenumbers import carrier, geocoder
 from tabulate import tabulate
 from urllib.request import urlopen
 
+
 class NumberAnalyzer(object):
     def __init__(self, number):
         self.number = phonenumbers.parse(number)
@@ -35,6 +36,7 @@ class NumberAnalyzer(object):
     
     def __str__(self):
         return str(f"\n{tabulate(self.parse_data)}")
+
 
 if __name__ == "__main__":
     os.system("cls")
